@@ -1,16 +1,18 @@
-import React, {useContext, useState} from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
   Image,
   Platform,
+  ScrollView,
   StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import FormInput from '../components/FormInput';
-import FormButton from '../components/FormButton';
-import SocialButton from '../components/SocialButton';
+import React, {useContext, useState} from 'react';
+
 import {AuthContext} from '../navigation/AuthProvider';
+import FormButton from '../components/FormButton';
+import FormInput from '../components/FormInput';
+import SocialButton from '../components/SocialButton';
 
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
@@ -24,7 +26,7 @@ const LoginScreen = ({navigation}) => {
         source={require('../assets/rn-social-logo.png')}
         style={styles.logo}
       />
-      <Text style={styles.text}>RN Social App</Text>
+      <Text style={styles.text}>Fitzo</Text>
 
       <FormInput
         labelValue={email}
@@ -91,7 +93,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    paddingTop: 50
+    paddingTop: 50,
   },
   logo: {
     height: 150,
