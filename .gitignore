@@ -28,7 +28,8 @@ build/
 .gradle
 local.properties
 *.iml
-
+#vs code
+.vscode
 # node.js
 #
 node_modules/
