@@ -13,7 +13,7 @@ import {AuthContext} from '../navigation/AuthProvider';
 import FormButton from '../components/FormButton';
 import FormInput from '../components/FormInput';
 import SocialButton from '../components/SocialButton';
-import Background from '../assests/Rectanglh';
+import Background from '../assests/Rectanglh.png';
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
