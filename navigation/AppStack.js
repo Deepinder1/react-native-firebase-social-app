@@ -22,7 +22,7 @@ const FeedStack = ({navigation}) => (
       options={{
         headerTitleAlign: 'center',
         headerTitleStyle: {
-          color: '#2e64e5',
+          color: '#85C61A',
           fontFamily: 'Kufam-SemiBoldItalic',
           fontSize:18
         },
@@ -36,7 +36,7 @@ const FeedStack = ({navigation}) => (
               name="plus"
               size={22}
               backgroundColor="#fff"
-              color="#2e64e5"
+              color="#85C61A"
               onPress={() => navigation.navigate('AddPost')}
             />
           </View>
@@ -57,7 +57,7 @@ const FeedStack = ({navigation}) => (
         headerBackTitleVisible: false,
         headerBackImage: () => (
           <View style={{marginLeft:15}}>
-            <Ionicons name="arrow-back" size={25} color="#2e64e5" />
+            <Ionicons name="arrow-back" size={25} color="#85C61A" />
           </View>
         ),
       }}
@@ -69,7 +69,7 @@ const AppStack = () => {
   return (
     <Tab.Navigator
       tabBarOptions={{
-        activeTintColor: '#2e64e5',
+        activeTintColor: '#85C61A',
       }}>
       <Tab.Screen
         name="Home"

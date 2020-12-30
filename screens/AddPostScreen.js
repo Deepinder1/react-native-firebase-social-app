@@ -1,25 +1,25 @@
-import React, {useState} from 'react';
 import {
-  View,
-  Text,
+  ActivityIndicator,
+  Alert,
   Platform,
   StyleSheet,
-  Alert,
-  ActivityIndicator,
+  Text,
+  View,
 } from 'react-native';
+import {
+  AddImage,
+  InputField,
+  InputWrapper,
+  StatusWrapper,
+  SubmitBtn,
+  SubmitBtnText,
+} from '../styles/AddPost';
+import React, {useState} from 'react';
+
 import ActionButton from 'react-native-action-button';
 import Icon from 'react-native-vector-icons/Ionicons';
 import ImagePicker from 'react-native-image-crop-picker';
 import storage from '@react-native-firebase/storage';
-
-import {
-  InputField,
-  InputWrapper,
-  AddImage,
-  SubmitBtn,
-  SubmitBtnText,
-  StatusWrapper,
-} from '../styles/AddPost';
 
 const AddPostScreen = () => {
   const [image, setImage] = useState(null);
@@ -112,7 +112,7 @@ const AddPostScreen = () => {
           </SubmitBtn>
         )}
       </InputWrapper>
-      <ActionButton buttonColor="#2e64e5">
+      <ActionButton buttonColor="#85C61A">
         <ActionButton.Item
           buttonColor="#9b59b6"
           title="Take Photo"
