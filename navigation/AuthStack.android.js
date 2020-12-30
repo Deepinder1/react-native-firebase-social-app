@@ -1,14 +1,13 @@
-import React, {useState, useEffect} from 'react';
-import {View} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
-import SignupScreen from '../screens/SignupScreen';
-import LoginScreen from '../screens/LoginScreen';
-import OnboardingScreen from '../screens/OnboardingScreen';
-
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import React, {useEffect, useState} from 'react';
 
 import AsyncStorage from '@react-native-community/async-storage';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { GoogleSignin } from '@react-native-community/google-signin';
+import LoginScreen from '../screens/LoginScreen';
+import OnboardingScreen from '../screens/OnboardingScreen';
+import SignupScreen from '../screens/SignupScreen';
+import {View} from 'react-native';
+import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
@@ -27,7 +26,7 @@ const AuthStack = () => {
     }); // Add some error handling, also you can simply do setIsFirstLaunch(null)
   
     GoogleSignin.configure({
-      webClientId: 'YOUR_APP_WEB_CLIENT_ID',
+      webClientId: '1021115713467-rc21pl0bsd14iv4vmfdldcpk3o9cccej.apps.googleusercontent.com',
     });
   
   }, []);

@@ -23,7 +23,7 @@ const LoginScreen = ({navigation}) => {
   return (
     <ScrollView contentContainerStyle={styles.container}>
       <Image
-        source={require('../assets/rn-social-logo.png')}
+        source={require('../assets/fitzo_logo.png')}
         style={styles.logo}
       />
       <Text style={styles.text}>Fitzo</Text>
@@ -58,14 +58,6 @@ const LoginScreen = ({navigation}) => {
       {Platform.OS === 'android' ? (
         <View>
           <SocialButton
-            buttonTitle="Sign In with Facebook"
-            btnType="facebook"
-            color="#4867aa"
-            backgroundColor="#e6eaf4"
-            onPress={() => fbLogin()}
-          />
-
-          <SocialButton
             buttonTitle="Sign In with Google"
             btnType="google"
             color="#de4d41"
@@ -96,8 +88,8 @@ const styles = StyleSheet.create({
     paddingTop: 50,
   },
   logo: {
-    height: 150,
-    width: 150,
+    height: 174,
+    width: 152,
     resizeMode: 'cover',
   },
   text: {
