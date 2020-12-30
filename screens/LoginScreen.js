@@ -13,7 +13,7 @@ import {AuthContext} from '../navigation/AuthProvider';
 import FormButton from '../components/FormButton';
 import FormInput from '../components/FormInput';
 import SocialButton from '../components/SocialButton';
-
+import Background from '../assests/Rectanglh';
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -21,7 +21,9 @@ const LoginScreen = ({navigation}) => {
   const {login, googleLogin, fbLogin} = useContext(AuthContext);
 
   return (
+
     <ScrollView contentContainerStyle={styles.container}>
+      <Background style={styles.background} >
       <Image
         source={require('../assets/fitzo_logo.png')}
         style={styles.logo}
@@ -82,6 +84,7 @@ const LoginScreen = ({navigation}) => {
           Don't have an acount? Create here
         </Text>
       </TouchableOpacity>
+      </Background>
     </ScrollView>
   );
 };
@@ -118,4 +121,11 @@ const styles = StyleSheet.create({
     color: '#2e64e5',
     fontFamily: 'Lato-Regular',
   },
+  background: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 16,
+    bottom: 0,
+  }
 });
