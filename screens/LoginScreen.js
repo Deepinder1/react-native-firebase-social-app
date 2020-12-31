@@ -1,5 +1,6 @@
 import {
   Image,
+  ImageBackground,
   Platform,
   ScrollView,
   StyleSheet,
@@ -13,7 +14,7 @@ import {AuthContext} from '../navigation/AuthProvider';
 import FormButton from '../components/FormButton';
 import FormInput from '../components/FormInput';
 import SocialButton from '../components/SocialButton';
-import Background from '../assests/Rectanglh.png';
+
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -21,14 +22,17 @@ const LoginScreen = ({navigation}) => {
   const {login, googleLogin, fbLogin} = useContext(AuthContext);
 
   return (
-
+    
     <ScrollView contentContainerStyle={styles.container}>
-      <Background style={styles.background} >
+    <ImageBackground
+    style={styles.background}
+    source={require('../assets/Rectangleh.png')}
+    imageStyle={{ resizeMode: 'cover' }}
+    />
       <Image
         source={require('../assets/fitzo_logo.png')}
         style={styles.logo}
       />
-      <Text style={styles.text}>Fitzo</Text>
 
       <FormInput
         labelValue={email}
@@ -84,7 +88,6 @@ const LoginScreen = ({navigation}) => {
           Don't have an acount? Create here
         </Text>
       </TouchableOpacity>
-      </Background>
     </ScrollView>
   );
 };
@@ -98,9 +101,17 @@ const styles = StyleSheet.create({
     padding: 20,
     paddingTop: 50,
   },
+  background: {
+    position: 'absolute',
+     top: 0,
+     left: 0,
+     right: 0,
+     bottom: 0,
+  },
   logo: {
     height: 174,
     width: 152,
+    marginBottom: 10,
     resizeMode: 'cover',
   },
   text: {
@@ -118,14 +129,7 @@ const styles = StyleSheet.create({
   navButtonText: {
     fontSize: 18,
     fontWeight: '500',
-    color: '#2e64e5',
+    color: '#85C61A',
     fontFamily: 'Lato-Regular',
-  },
-  background: {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 16,
-    bottom: 0,
   }
 });

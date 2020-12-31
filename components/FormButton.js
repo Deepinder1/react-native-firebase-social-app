@@ -1,6 +1,7 @@
-import React from 'react';
-import {Text, TouchableOpacity, StyleSheet} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {windowHeight, windowWidth} from '../utils/Dimentions';
+
+import React from 'react';
 
 const FormButton = ({buttonTitle, ...rest}) => {
   return (
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: '100%',
     height: windowHeight / 15,
-    backgroundColor: '#2e64e5',
+    backgroundColor: '#85C61A',
     padding: 10,
     alignItems: 'center',
     justifyContent: 'center',

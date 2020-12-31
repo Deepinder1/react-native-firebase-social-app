@@ -1,9 +1,17 @@
+import {
+  ImageBackground,
+  Platform,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React, {useContext, useState} from 'react';
-import {View, Text, TouchableOpacity, Platform, StyleSheet} from 'react-native';
-import FormInput from '../components/FormInput';
-import FormButton from '../components/FormButton';
-import SocialButton from '../components/SocialButton';
+
 import {AuthContext} from '../navigation/AuthProvider';
+import FormButton from '../components/FormButton';
+import FormInput from '../components/FormInput';
+import SocialButton from '../components/SocialButton';
 
 const SignupScreen = ({navigation}) => {
   const [email, setEmail] = useState();
@@ -14,6 +22,11 @@ const SignupScreen = ({navigation}) => {
 
   return (
     <View style={styles.container}>
+      <ImageBackground
+        style={styles.background}
+        source={require('../assets/Rectangleh.png')}
+        imageStyle={{resizeMode: 'cover'}}
+      />
       <Text style={styles.text}>Create an account</Text>
 
       <FormInput
@@ -52,12 +65,12 @@ const SignupScreen = ({navigation}) => {
           By registering, you confirm that you accept our{' '}
         </Text>
         <TouchableOpacity onPress={() => alert('Terms Clicked!')}>
-          <Text style={[styles.color_textPrivate, {color: '#e88832'}]}>
+          <Text style={[styles.color_textPrivate, {color: '#85C61A'}]}>
             Terms of service
           </Text>
         </TouchableOpacity>
         <Text style={styles.color_textPrivate}> and </Text>
-        <Text style={[styles.color_textPrivate, {color: '#e88832'}]}>
+        <Text style={[styles.color_textPrivate, {color: '#85C61A'}]}>
           Privacy Policy
         </Text>
       </View>
@@ -71,7 +84,7 @@ const SignupScreen = ({navigation}) => {
             backgroundColor="#e6eaf4"
             onPress={() => {}}
           />
-    
+
           <SocialButton
             buttonTitle="Sign Up with Google"
             btnType="google"
@@ -101,11 +114,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
   },
+  background: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  },
   text: {
     fontFamily: 'Kufam-SemiBoldItalic',
     fontSize: 28,
     marginBottom: 10,
-    color: '#051d5f',
+    color: '#85C61A',
   },
   navButton: {
     marginTop: 15,
@@ -113,7 +133,7 @@ const styles = StyleSheet.create({
   navButtonText: {
     fontSize: 18,
     fontWeight: '500',
-    color: '#2e64e5',
+    color: '#85C61A',
     fontFamily: 'Lato-Regular',
   },
   textPrivate: {
